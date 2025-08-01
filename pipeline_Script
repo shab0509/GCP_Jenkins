@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    tools {
+        maven 'm3'
+    }
+    
+    stages {
+        stage('git clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/shab0509/GCP_Jenkins.git'
+            }
+        }
+        stage('Maven Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
