@@ -1,0 +1,4 @@
+insert into covid.coviddeath(iso_code,continent,location,date)
+values
+("IND","ASIA","INDIA","2025-08-03"),
+("IND","ASIA","INDIA","2025-08-04")
